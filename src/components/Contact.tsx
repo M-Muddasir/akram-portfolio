@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { Toaster, toast } from "react-hot-toast";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -22,7 +23,6 @@ export function Contact() {
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "vXbJxyxNIv7iaKk0n";
 
     try {
-      console.log({formData});
       await emailjs.send(
         serviceId,
         templateId,
@@ -36,7 +36,9 @@ export function Contact() {
         { publicKey }
       );
       setFormData({ name: "", email: "", subject: "", message: "" });
+      toast.success("Message sent successfully");
     } catch (error) {
+      toast.error("Failed to send.Please try again!");
     } finally {
       setIsSubmitting(false);
     }
@@ -88,6 +90,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Toaster position="top-right" />
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Get In Touch
