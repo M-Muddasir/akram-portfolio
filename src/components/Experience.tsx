@@ -28,6 +28,20 @@ const experiences = [
       "Built and maintained core modules of an e-commerce platform including product management, checkout process, and order tracking",
     ],
   },
+  {
+    title: "Software Engineer",
+    company: "Visnext Software Solutions",
+    location: "Lahore",
+    period: "Jan 2023 - August 2023",
+    responsibilities: [
+      "Developed and maintained customer-facing banking web applications using React, Node.js, Express, and MongoDB in a MERN stack environment",
+      "Built secure, responsive React components for customer onboarding, account management, and transaction history views",
+      "Integrated REST APIs for real-time balance updates, notifications, and secure user authentication workflows",
+      "Collaborated closely with backend teams on data modeling and business logic using TypeScript and PostgreSQL",
+      "Implemented form validation, error handling, and accessibility best practices to enhance user experience",
+      "Focused on clean and consistent UI/UX using Ant Design, Bootstrap, and modern frontend patterns",
+    ],
+  },
 ];
 
 export function Experience() {
@@ -49,9 +63,8 @@ export function Experience() {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`relative flex flex-col md:flex-row gap-8 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
               >
                 {/* Timeline dot */}
                 <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-600 rounded-full border-4 border-white dark:border-gray-900 z-10"></div>
@@ -59,9 +72,8 @@ export function Experience() {
                 {/* Content */}
                 <div className="flex-1 md:w-1/2">
                   <div
-                    className={`bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 ${
-                      index % 2 === 0 ? "md:mr-8" : "md:ml-8"
-                    }`}
+                    className={`bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 ${index % 2 === 0 ? "md:mr-8" : "md:ml-8"
+                      }`}
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 bg-purple-100 dark:bg-purple-900/50 rounded-lg">

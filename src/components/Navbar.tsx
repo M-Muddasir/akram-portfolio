@@ -24,7 +24,7 @@ export function Navbar() {
             href="#home"
             className="text-xl font-bold text-purple-600 dark:text-purple-400"
           >
-            MA
+            &lt;MA/&gt;
           </a>
 
           {/* Desktop Navigation */}

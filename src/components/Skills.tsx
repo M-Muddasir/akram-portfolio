@@ -7,7 +7,7 @@ const skillCategories = [
   {
     title: "Backend",
     color: "blue",
-    skills: ["Node.js", "Express.js", "REST APIs", "JWT", "WebSockets"],
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT", "WebSockets", "Socket.io"],
   },
   {
     title: "Database",
@@ -17,17 +17,26 @@ const skillCategories = [
   {
     title: "DevOps & Cloud",
     color: "orange",
-    skills: ["Docker", "AWS (EC2, S3, RDS)", "Vercel", "Heroku", "Netlify", "GitHub Actions", "Jenkins", "PM2", "Terraform"],
+    skills: ["Docker", "AWS (EC2, S3, RDS)", "Vercel", "Heroku", "Netlify", "Render", "GitHub Actions"],
+  },
+  {
+    title: "AI & LLM Integration",
+    color: "teal",
+    skills: [
+      "OpenAI API",
+      "ChatGPT 4.0",
+      "RAG",
+      "Semantic Search",
+      "Embeddings",
+      "LangChain",
+      "Vector DBs (Pinecone, ChromaDB)",
+      "Prompt Engineering",
+    ],
   },
   {
     title: "Version Control & Tools",
     color: "pink",
-    skills: ["Git", "GitHub", "Postman", "Nginx", "Linux CLI"],
-  },
-  {
-    title: "Others",
-    color: "teal",
-    skills: ["Agile (Scrum)", "API Integration", "CI/CD", "System Monitoring"],
+    skills: ["Git", "GitHub", "Postman", "ClickUp", "Agile (Scrum)", "Jira", "API Integration", "CI/CD", "System Monitoring"],
   },
 ];
 
@@ -61,6 +70,11 @@ const colorClasses: Record<string, { bg: string; border: string; text: string }>
     bg: "bg-teal-100 dark:bg-teal-900/30",
     border: "border-teal-200 dark:border-teal-800",
     text: "text-teal-700 dark:text-teal-300",
+  },
+  indigo: {
+    bg: "bg-indigo-100 dark:bg-indigo-900/30",
+    border: "border-indigo-200 dark:border-indigo-800",
+    text: "text-indigo-700 dark:text-indigo-300",
   },
 };
 

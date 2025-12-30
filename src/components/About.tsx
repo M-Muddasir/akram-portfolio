@@ -34,13 +34,11 @@ export function About() {
           <div className="w-20 h-1 bg-purple-600 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Text Content */}
           <div>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              I&apos;m a passionate Full Stack Engineer with 3 years of experience
-              specializing in the MERN stack. I love building applications that are
-              not only functional but also provide great user experiences.
+              I&apos;m a passionate Full Stack Engineer with 4 years of experience specializing in the MERN stack, building fast, reliable products with intuitive user experiences. I also integrate applied AI into products leveraging OpenAI and ChatGPT‑4, LangChain, RAG pipelines, semantic search, and vector databases like Pinecone and ChromaDB to deliver smart chatbots, knowledge assistants, and automation that solve real user problems.
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
               My journey in software development has taken me through various

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -16,15 +17,29 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Create mailto link with form data
-    const mailtoLink = `mailto:makram6925@gmail.com?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_h6kz6uu";
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_7lkdzcv";
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "vXbJxyxNIv7iaKk0n";
 
-    window.location.href = mailtoLink;
-    setIsSubmitting(false);
+    try {
+      console.log({formData});
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          title: formData.subject,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        { publicKey }
+      );
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -66,7 +81,7 @@ export function Contact() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/makram6925",
+      href: "https://github.com/MuhammadAkram69",
     },
   ];
 

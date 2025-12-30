@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, MapPin, Download } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -10,8 +11,15 @@ export function Hero() {
         <div className="text-center">
           {/* Avatar */}
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-              MA
+            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg ring-2 ring-purple-600/20">
+              <Image
+                src="/profile3.jpeg"
+                alt="Profile"
+                width={128}
+                height={128}
+                priority
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -31,9 +39,9 @@ export function Hero() {
 
           {/* Summary */}
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300 text-lg mb-10 leading-relaxed">
-            Software Engineer with 3 years of experience building and maintaining
-            full-stack applications using the MERN stack. Skilled in designing
-            RESTful APIs, creating responsive frontends, and deploying scalable
+            Software Engineer with 4 years of experience building and maintaining
+            full-stack applications using the MERN stack and AI. Skilled in designing
+            RESTful APIs, creating responsive frontends, LLM chatbots, RAG semantic search and deploying scalable
             applications.
           </p>
 
@@ -67,7 +75,7 @@ export function Hero() {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://github.com/makram6925"
+              href="https://github.com/MuhammadAkram69"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300"

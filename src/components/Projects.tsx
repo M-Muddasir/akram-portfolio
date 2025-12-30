@@ -9,6 +9,7 @@ const projects = [
     icon: Layers,
     tags: ["MERN Stack", "Microservices", "LMS", "CMS", "Admin Panel"],
     color: "purple",
+    link: "https://www.urqa.com/",
   },
   {
     title: "MyRep",
@@ -18,6 +19,7 @@ const projects = [
     icon: Users,
     tags: ["React", "Node.js", "Scheduling", "Healthcare", "CRM"],
     color: "blue",
+    link: "https://myrepapp.com/",
   },
   {
     title: "Grantrack",
@@ -27,6 +29,7 @@ const projects = [
     icon: FileText,
     tags: ["Full Stack", "Grant Management", "Dashboard", "Reporting"],
     color: "green",
+    link: "https://m-strat.com/",
   },
 ];
 
@@ -86,12 +89,15 @@ export function Projects() {
                         {project.subtitle}
                       </p>
                     </div>
-                    <button
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`p-2 rounded-lg ${colors.icon} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                       aria-label="View project"
                     >
                       <ExternalLink className="w-4 h-4" />
-                    </button>
+                    </a>
                   </div>
 
                   <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">
