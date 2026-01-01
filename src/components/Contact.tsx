@@ -63,7 +63,7 @@ export function Contact() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+92 344 134 9303",
+      value: "+92 344 1349303",
       href: "tel:+923441349303",
     },
     {
